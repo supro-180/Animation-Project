@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    background: #000;
+}
+.nav-bar{
+    display: flex;
+    padding: 2% 4%;
+}
+.nav-logo img{
+    width: 135px;
+
+}
+
+.nav-links{
+   flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 10px 12px;
+}
+
+.nav-links ul a{
+    color: #ffea00;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.hero{
+    width: 100%;
+    /*  top: 80%;
+    left: 50%; */
+    margin-top: 170px;      
+    text-align: center;
+    color: white;
+}
+h1{
+    font-size: 60px;
+    color: transparent;
+    -webkit-text-stroke: 1px #ffea00; 
+    background: url(back.png);
+    -webkit-background-clip: text;
+    /* background-position: 0 0; */
+     
+    
+    
+    
+    
+    animation-name: style;  
+    animation-duration: 50s;
+    animation-timing-function: linear;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: forwards;
+
+}
+
+
+@keyframes style{
+   to{
+       width: 100%;
+       background-position: 20000px 0;
+   }
+}
+
+
+
+.btn button{
+    width: 160px;
+    height: 50px;
+    border: 1px solid #ffea00;
+    color: hsl(66, 100%, 50%);;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #000;
+    margin-top: 45px;
+    font-weight: bold;
+    
+}
+
+.btn button:hover{
+    background-color: yellowgreen;
+}
+.menu-icon{
+    width: 26px;
+    display: none;
+}
+
+@media (max-width: 700px){
+    .hero h1{
+        font-size: 30px;
+        text-align: center;
+       
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links ul{
+        padding: 10px 5px;
+    
+    }
+    .nav-links {
+        margin-top: 30px;
+    }
+    .nav-logo{
+        margin-top: 10px;
+        margin-left: 5px;
+    }
+    .menu-icon{
+        display: block;
+        top: 20px;
+        right: 35px;
+        position: absolute;
+        cursor: pointer;
+    }
+    #mobileMenu{
+        height: 0;
+        overflow: hidden;
+        transition: 0.5s;
+    }
+}
